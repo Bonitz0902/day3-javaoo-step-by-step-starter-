@@ -2,7 +2,7 @@ package ooss;
 
 public class Student extends Person {
     private Klass klass;
-    private String name;
+    private final String name;
 
     public Student(int id, String name, int age) {
 

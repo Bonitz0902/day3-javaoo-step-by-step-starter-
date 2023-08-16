@@ -5,10 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Teacher extends Person {
-    private Klass klass;
-    private Student student;
     private List<Klass> listOfKlass;
-    private String name;
+    private final String name;
     public Teacher(int id, String name, int age) {
 
         super(id, name, age);
