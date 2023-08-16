@@ -17,7 +17,10 @@ public class Teacher extends Person {
     @Override
     public String introduce(){
 
-
+        if(listOfKlass.size() == 0){
+            return super.introduce()+
+                    String.format(" I am a teacher.");
+        }
         return super.introduce()+
                 String.format(" I am a teacher. I teach Class %s.",assignedClass());
     }

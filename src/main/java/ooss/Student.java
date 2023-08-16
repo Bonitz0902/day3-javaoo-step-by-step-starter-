@@ -11,8 +11,12 @@ public class Student extends Person {
     }
     @Override
     public String introduce(){
-        if(klass.isLeader(this))
+        if(klass == null)
+            return super.introduce() + String.format(" I am a student.");
+        else if (klass.isLeader(this)) {
             return super.introduce()+ String.format(" I am a student. I am the leader of class %d.",klass.getId());
+
+        }
         return super.introduce()+
                 String.format(" I am a student. I am in class %d.",klass.getId());
     }
