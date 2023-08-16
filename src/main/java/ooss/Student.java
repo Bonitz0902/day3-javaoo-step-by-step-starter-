@@ -2,10 +2,12 @@ package ooss;
 
 public class Student extends Person {
     private Klass klass;
+    private String name;
 
     public Student(int id, String name, int age) {
 
         super(id, name, age);
+        this.name = name;
     }
     @Override
     public String introduce(){
@@ -28,4 +30,13 @@ public class Student extends Person {
         return this.klass;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+
+    public String introduceWith(String prompt, String leaderName, String studentName) {
+        return String.format("%s %s, student of Class %d. I know %s become Leader.",
+                prompt,studentName,getId(),leaderName);
+    }
 }

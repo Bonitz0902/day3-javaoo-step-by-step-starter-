@@ -8,10 +8,12 @@ public class Teacher extends Person {
     private Klass klass;
     private Student student;
     private List<Klass> listOfKlass;
+    private String name;
     public Teacher(int id, String name, int age) {
 
         super(id, name, age);
         this.listOfKlass = new ArrayList<>();
+        this.name = name;
     }
 
     @Override
@@ -38,5 +40,10 @@ public class Teacher extends Person {
 
     public boolean isTeaching(Student student){
         return this.listOfKlass.contains(student.getKlass());
+    }
+
+    public String introduceWith(String prompt, String studentName, String message){
+        return String.format("%s %s, teacher of Class %s. I know %s %s.", prompt,
+                this.name, assignedClass(),studentName, message);
     }
 }
