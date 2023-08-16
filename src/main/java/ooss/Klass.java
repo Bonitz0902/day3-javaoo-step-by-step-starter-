@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Klass {
     private final int id;
     public Klass(int id) {
+
         this.id = id;
     }
     public int getId(){
