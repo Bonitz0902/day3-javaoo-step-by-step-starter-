@@ -3,7 +3,7 @@ package ooss;
 import java.util.Objects;
 
 public class Klass {
-    private int id;
+    private final int id;
     public Klass(int id) {
         this.id = id;
     }
