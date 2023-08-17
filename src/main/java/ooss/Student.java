@@ -12,6 +12,7 @@ public class Student extends Person {
     @Override
     public String introduce(){
         if(klass == null)
+            //TODO .format is redundant and just add the string using concat or other method
             return super.introduce() + String.format(" I am a student.");
         else if (klass.isLeader(this)) {
             return super.introduce()+ String.format(" I am a student. I am the leader of class %d.",klass.getId());
@@ -40,9 +41,10 @@ public class Student extends Person {
         return this.name;
     }
 
-
+// TODO introduceWith method can be moved to klass
     public String introduceWith(String prompt, String leaderName, String studentName) {
         return String.format("%s %s, student of Class %d. I know %s become Leader.",
                 prompt,studentName,getId(),leaderName);
     }
+    //TODO add more description to the git commits
 }

@@ -18,6 +18,7 @@ public class Teacher extends Person {
     public String introduce(){
 
         if(listOfKlass.size() == 0){
+            //TODO format should only be used when there's a variable or attribute to be inserted can just add the string
             return super.introduce()+
                     String.format(" I am a teacher.");
         }
@@ -42,7 +43,7 @@ public class Teacher extends Person {
     public boolean isTeaching(Student student){
         return this.listOfKlass.contains(student.getKlass());
     }
-
+    // TODO introduceWith method can be moved to klass
     public String introduceWith(String prompt, String studentName, String message){
         return String.format("%s %s, teacher of Class %s. I know %s %s.", prompt,
                 this.name, assignedClass(),studentName, message);
